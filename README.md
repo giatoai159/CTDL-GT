@@ -1,2 +1,4 @@
 # CTDL-GT
-Đồ Án 1 môn Cấu trúc dữ liệu và giải thuật
+Đồ Án môn Cấu trúc dữ liệu và giải thuật
+18120598 - Huỳnh Gia Toại
+18120618 - Hồ Hiếu Trọng
