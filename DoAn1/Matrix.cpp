@@ -110,7 +110,7 @@ int min(int a, int b)
 int hangMaTran(float mat[MAX][MAX], int row, int col)
 {
 	int hang = min(row, col); // So hang mac dinh lon nhat cua ma tran
-							  // Quy trinh rut gon ma tran de tim hang
+	// Quy trinh rut gon ma tran de tim hang
 	for (int i = 0; i<hang; i++) // Xet tung cot cua ma tran de bien doi
 	{
 		if (mat[i][i] != 0) // Kiem tra xem phan tu cheo' cua ma tran co = 0 khong, neu co thi thuc hien swap dong va cot, neu ko thi thuc hien qua trinh rut gon
@@ -133,7 +133,7 @@ int hangMaTran(float mat[MAX][MAX], int row, int col)
 			{
 				if (mat[j][i])
 				{
-					flag = 0;
+					flag = 0; // flag = 0 nghia la dong` dang xet khong phai la dong trong'
 					swapRow(mat, row, col, i, j); // Thay doi vi tri dong thanh dang bac thang
 					break;
 				}
@@ -142,7 +142,7 @@ int hangMaTran(float mat[MAX][MAX], int row, int col)
 			{
 				hang--; // Dem so dong 0 0 0 de tru hang dan` dan`
 				swapCol(mat, row, col, i, col - 1); // Chuyen cac phan tu cua cot ra dang bac thang
-				i--;
+				i--; // Xet lai ma tran sau khi tru hang tu dau
 			}
 		}
 	}
