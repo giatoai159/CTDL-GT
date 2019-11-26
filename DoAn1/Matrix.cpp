@@ -110,7 +110,7 @@ int min(int a, int b)
 int hangMaTran(float mat[MAX][MAX], int row, int col)
 {
 	int hang = min(row, col); // So hang mac dinh lon nhat cua ma tran
-	// Quy trinh rut gon ma tran de tim hang
+							  // Quy trinh rut gon ma tran de tim hang
 	for (int i = 0; i<hang; i++) // Xet tung cot cua ma tran de bien doi
 	{
 		if (mat[i][i] != 0) // Kiem tra xem phan tu cheo' cua ma tran co = 0 khong, neu co thi thuc hien swap dong va cot, neu ko thi thuc hien qua trinh rut gon
@@ -133,7 +133,7 @@ int hangMaTran(float mat[MAX][MAX], int row, int col)
 			{
 				if (mat[j][i])
 				{
-					flag = 0; // flag = 0 nghia la dong` dang xet khong phai la dong trong'
+					flag = 0;
 					swapRow(mat, row, col, i, j); // Thay doi vi tri dong thanh dang bac thang
 					break;
 				}
@@ -142,7 +142,7 @@ int hangMaTran(float mat[MAX][MAX], int row, int col)
 			{
 				hang--; // Dem so dong 0 0 0 de tru hang dan` dan`
 				swapCol(mat, row, col, i, col - 1); // Chuyen cac phan tu cua cot ra dang bac thang
-				i--; // Xet lai ma tran sau khi tru hang tu dau
+				i--;
 			}
 		}
 	}
@@ -195,8 +195,8 @@ void HePTTT(float a[MAX][MAX], float b[MAX], int row, int col)
 			i++; j++; // tang gia tri i va j sau do tiep tuc vong lap moi neu i < row va j < col
 		}
 	}
-	if (row < col) cout << "He phuong trinh co vo so nghiem" << endl; // Neu so dong nho hon so cot dong nghia so luong bien nhieu hon so phuong trinh nen he phuong trinh vo nghiem
-	else if (a[row - 1][col - 1] == 0) // Xet gia tri cuoi cung cua hang va cot bang 0 hay khong
+	if (hangMaTran(a, row, col) != row) row--;
+	if (a[row - 1][col - 1] == 0) // Xet gia tri cuoi cung cua hang va cot bang 0 hay khong
 			if (b[row - 1] != 0) cout << "He pt vo nghiem" << endl; // Neu phan tu cuoi cung cua vecto b bang khong thi he phuong trinh vo nghiem
 			else cout << "He pt co vo so nghiem" << endl; // Nguoc lai c vo so nghiem
 		else // Neu phan tu cuoi cung khac 0
