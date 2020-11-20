@@ -13,5 +13,5 @@ Tính toán ma trận, vector
 7.	Phép toán nhân vector với một số alpha
 
 # Đồ án 2 - Nén file - C++
-Nén file văn bản theo kiểu RLE (Run-length encoding)
+Nén file văn bản theo kiểu RLE (Run-length encoding)  
 VD: AAAAABBBBCCCDDDD -> 5A4B3C4D
