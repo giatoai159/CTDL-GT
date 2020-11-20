@@ -1,5 +1,4 @@
-# CTDL-GT
-## Đồ Án - Cấu trúc dữ liệu và giải thuật
+# Đồ Án - Cấu trúc dữ liệu và giải thuật
 
 # Đồ án 1 - Tính toán - C++
 Tính toán ma trận, vector
