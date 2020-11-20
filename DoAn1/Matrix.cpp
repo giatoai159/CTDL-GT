@@ -195,8 +195,8 @@ void HePTTT(float a[MAX][MAX], float b[MAX], int row, int col)
 			i++; j++; // tang gia tri i va j sau do tiep tuc vong lap moi neu i < row va j < col
 		}
 	}
-	if (hangMaTran(a, row, col) != row) row--;
-	if (a[row - 1][col - 1] == 0) // Xet gia tri cuoi cung cua hang va cot bang 0 hay khong
+	if (row < col) cout << "He phuong trinh co vo so nghiem" << endl; // Neu so dong nho hon so cot dong nghia so luong bien nhieu hon so phuong trinh nen he phuong trinh vo nghiem
+	else if (a[row - 1][col - 1] == 0) // Xet gia tri cuoi cung cua hang va cot bang 0 hay khong
 			if (b[row - 1] != 0) cout << "He pt vo nghiem" << endl; // Neu phan tu cuoi cung cua vecto b bang khong thi he phuong trinh vo nghiem
 			else cout << "He pt co vo so nghiem" << endl; // Nguoc lai c vo so nghiem
 		else // Neu phan tu cuoi cung khac 0

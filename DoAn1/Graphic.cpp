@@ -38,10 +38,10 @@ void title()
 
 void menu1()
 {
-	InChu("1. Bool (chua lam duoc) ", true, false);
-	InChu("2. Vector               ", false, false);
-	InChu("3. Matrix               ", false, false);
-	InChu("4. Exit                 ", false, true);
+	InChu("1. Bool ", true, false);
+	InChu("2. Vector", false, false);
+	InChu("3. Matrix", false, false);
+	InChu("4. Exit ", false, true);
 }
 
 void menu2()
